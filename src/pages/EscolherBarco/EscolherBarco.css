@@ -1,0 +1,152 @@
+.escolher-barco-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f8f9fa; /* Cor de fundo clara */
+  }
+  
+  .escolher-barco-header {
+    display: flex;
+    align-items: center;
+    background-color: #004f6e; /* Cor azul-escuro */
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .back-button {
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .escolher-barco-header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .escolher-barco-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .boat-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  
+  .tab-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .tab-menu button {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .tab-menu .active-tab {
+    border-bottom: 3px solid #004f6e; /* Cor azul-escuro */
+    font-weight: bold;
+  }
+  
+  .escolher-barco-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+  
+  .escolher-barco-table thead {
+    background-color: #e9ecef; /* Cor de cabeçalho clara */
+    text-align: left;
+  }
+  
+  .escolher-barco-table th,
+  .escolher-barco-table td {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .barco-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .barco-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #004f6e;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .barco-button:hover {
+    text-decoration: underline;
+  }
+  
+  .barco-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .mais-barcos-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #004f6e; /* Cor azul-escuro */
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .mais-barcos-button:hover {
+    background-color: #006d93; /* Azul um pouco mais claro */
+  }
+  
+  .escolher-barco-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #e9ecef; /* Cor de fundo clara */
+  }
+  
+  .footer-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #004f6e; /* Azul-escuro */
+    cursor: pointer;
+  }
+  
+  .footer-icon:hover {
+    color: #006d93; /* Azul um pouco mais claro */
+  }
+  
