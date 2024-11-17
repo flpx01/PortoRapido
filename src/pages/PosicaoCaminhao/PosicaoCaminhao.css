@@ -1,0 +1,127 @@
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #1e4954;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  border: 2px solid #1e4954;
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.truck-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #1e4954;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H3a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5l2 3h9a2 2 0 0 1 2 2v5"/><circle cx="17" cy="17" r="2"/><circle cx="7" cy="17" r="2"/></svg>') no-repeat center center;
+  mask-size: contain;
+}
+
+.info {
+  flex: 1;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.truck-number {
+  color: #1e4954;
+}
+
+.status-text.green {
+  color: #4CAF50;
+}
+
+.location {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.eta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.clock {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #666;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>') no-repeat center center;
+  mask-size: contain;
+}
+
+.footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.footer-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #1e4954;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.footer-button:hover {
+  opacity: 0.8;
+}

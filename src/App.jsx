@@ -7,6 +7,7 @@ import AgendarBarco from "./pages/EscolherBarco/AgendarBarco";
 import Agendados from "./pages/Agendados/Agendados";
 import RegistrarPonto from "./pages/RegistrarPonto/RegistrarPonto";
 import "./styles/global.css";
+import PosicaoCaminhao from "./pages/PosicaoCaminhao/PosicaoCaminhao";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/escolher-barco" element={<EscolherBarco />} />
         <Route path="/escolher-barco/agendar/:barcoId" element={<AgendarBarco />} />
         <Route path="/agendados" element={<Agendados />} />
+        <Route path="/posicao-caminhao" element={<PosicaoCaminhao />} />
       </Routes>
     </Router>
   );
