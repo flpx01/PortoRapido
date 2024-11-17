@@ -1,0 +1,102 @@
+.alerts-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.alerts-header {
+  background-color: #1e4954;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.alerts-header h1 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.alerts-main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.alert-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.alert-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #1e4954;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-size: 1rem;
+  color: #1e4954;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.alert-timestamp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.clock-icon {
+  font-size: 0.875rem;
+}
+
+.alert-description {
+  font-size: 0.875rem;
+  color: #333;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.alert-details {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.alert-traffic {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
