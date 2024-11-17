@@ -1,0 +1,17 @@
+.registrar-ponto-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .registrar-ponto-button:hover {
+    background-color: #0056b3;
+  }
+  

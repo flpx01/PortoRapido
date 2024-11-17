@@ -1,0 +1,81 @@
+.agendar-barco-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f8f9fa; /* Fundo claro */
+    padding: 10px;
+  }
+  
+  .agendar-barco-header {
+    display: flex;
+    align-items: center;
+    background-color: #004f6e; /* Azul-escuro */
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .back-button {
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .agendar-barco-header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .agendar-barco-info {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .agendar-barco-info p {
+    margin: 5px 0;
+  }
+  
+  .agendar-barco-info h2 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  
+  .agendar-barco-viagens {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .viagem-card {
+    border: 1px solid #004f6e; /* Azul-escuro */
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .viagem-card p {
+    margin: 5px 0;
+  }
+  
+  .confirmar-button {
+    background-color: #004f6e; /* Azul-escuro */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .confirmar-button:hover {
+    background-color: #006d93; /* Azul mais claro */
+  }
+  

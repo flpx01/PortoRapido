@@ -12,8 +12,9 @@ const EscolherBarco = () => {
   ];
 
   // Função para redirecionar ao clicar no barco
-  const handleSelecionarBarco = (barcoId) => {
-    navigate(`/escolher-barco/agendar/${barcoId}`); // Redireciona para a rota com o ID do barco
+  const handleSelecionarBarco = (barco) => {
+    // Passa os dados do barco para a página de agendamento usando navigate com state
+    navigate(`/escolher-barco/agendar/${barco.id}`, { state: barco });
   };
 
   return (
@@ -50,7 +51,7 @@ const EscolherBarco = () => {
               <td className="barco-cell">
                 <button
                   className="barco-button"
-                  onClick={() => handleSelecionarBarco(barco.id)}
+                  onClick={() => handleSelecionarBarco(barco)}
                 >
                   <img src="/assets/boat-icon.png" alt="Barco" className="barco-icon" />
                   {barco.nome}
