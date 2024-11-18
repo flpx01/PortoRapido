@@ -7,7 +7,9 @@ export default function PosicaoCaminhao() {
   return (
     <div className="container">
       <header className="header">
-        <button className="back-button" onClick={() => navigate("/dashboard")}>←</button>
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ←
+        </button>
         <h1>Caminhão</h1>
       </header>
 
@@ -86,10 +88,10 @@ export default function PosicaoCaminhao() {
           className="footer-button"
           onClick={() => navigate("/dashboard")}
         >
-          🏠
+          <i class="las la-home"></i>
         </button>
         <button className="footer-button" onClick={() => navigate("/alertas")}>
-          ❗
+        <i class="las la-exclamation-circle"></i>
         </button>
       </footer>
     </div>

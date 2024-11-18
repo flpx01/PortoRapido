@@ -69,8 +69,8 @@ const EscolherBarco = () => {
       </button>
 
       <footer className="escolher-barco-footer">
-        <button className="footer-icon" onClick={() => navigate("/dashboard")}>🏠</button>
-        <button className="footer-icon" onClick={() => navigate("/alertas")}>❗</button>
+        <button className="footer-icon" onClick={() => navigate("/dashboard")}><i class="las la-home"></i></button>
+        <button className="footer-icon" onClick={() => navigate("/alertas")}><i class="las la-exclamation-circle"></i></button>
       </footer>
     </div>
   );
