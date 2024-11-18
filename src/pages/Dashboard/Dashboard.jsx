@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaShip, FaMapMarkerAlt, FaCalendarCheck, FaHome, FaBell } from 'react-icons/fa';
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -26,31 +27,70 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      {user ? (
-        <div className="dashboard-content">
-          <h1>Bem-vindo, {user.nome}!</h1>
-          <p>E-mail: {user.email}</p>
-          <div className="buttons-container">
-            <button className="dashboard-button" onClick={() => navigate("/escolher-barco")}>
-              Escolher Barco
-            </button>
-            <button className="dashboard-button" onClick={() => navigate("/porto-registro")}>
-              Porto de Registro
-            </button>
-            <button className="dashboard-button" onClick={() => navigate("/posicao-caminhao")}>
-              Posição do Caminhão
-            </button>
-            <button className="dashboard-button" onClick={() => navigate("/agendados")}>
-              Agendados
+      <div className="dashboard-header">
+        <div className="user-info">
+          <img
+            src="https://via.placeholder.com/40"
+            alt="Avatar"
+          />
+          <p>Olá, {user ? user.nome : "Carregando..."}</p>
+        </div>
+        <FaBell className="bell-icon" onClick={() => navigate("/alertas")} />
+      </div>
+
+      <div className="dashboard-content">
+        {user ? (
+          <div>
+            <h1>Porto Rápido</h1>
+            <div className="buttons-container">
+              <button
+                className="dashboard-button"
+                onClick={() => navigate("/escolher-barco")}
+              >
+                <FaShip className="icon" />
+                Escolher Barco
+              </button>
+              <button
+                className="dashboard-button"
+                onClick={() => navigate("/porto-registro")}
+              >
+                <FaMapMarkerAlt className="icon" />
+                Ponto de Registro
+              </button>
+              <button
+                className="dashboard-button"
+                onClick={() => navigate("/posicao-caminhao")}
+              >
+                <FaMapMarkerAlt className="icon" />
+                Posição do Caminhão
+              </button>
+              <button
+                className="dashboard-button"
+                onClick={() => navigate("/agendados")}
+              >
+                <FaCalendarCheck className="icon" />
+                Agendados
+              </button>
+            </div>
+            <button className="logout-button" onClick={handleLogout}>
+              Sair
             </button>
           </div>
-          <button onClick={handleLogout} className="logout-button">
-            Sair
-          </button>
+        ) : (
+          <p>Carregando...</p>
+        )}
+      </div>
+
+      <div className="bottom-navbar">
+        <div className="nav-item" onClick={() => navigate("/dashboard")}>
+          <FaHome className="icon" />
+          <p>Início</p>
         </div>
-      ) : (
-        <p>Carregando...</p>
-      )}
+        <div className="nav-item" onClick={() => navigate("/alertas")}>
+          <FaBell className="icon" />
+          <p>Notificações</p>
+        </div>
+      </div>
     </div>
   );
 };

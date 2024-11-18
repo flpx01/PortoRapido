@@ -9,7 +9,7 @@ const Agendados = () => {
 
   // Função para redirecionar à tela de Registrar Ponto
   const handleRegistrarPonto = (agendamento) => {
-    navigate("/registrar-ponto", { state: agendamento });
+    navigate("/porto-registro", { state: agendamento });
   };
 
   return (

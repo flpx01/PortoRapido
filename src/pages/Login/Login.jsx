@@ -43,6 +43,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-form">
+      <img src="logo.png" alt="PortoRápido" className="login-logo" />
         <h1 className="login-title">Login</h1>
         <div className="login-input-container">
           <input
