@@ -50,7 +50,7 @@ const Register = () => {
     <div className="register-container">
       <div className="register-form">
         <img
-          src="https://via.placeholder.com/150"
+          src="src/assets/61f1ece6-5915-4f8b-a242-586e78576196.jpeg"
           alt="Logo"
           className="register-logo"
         />

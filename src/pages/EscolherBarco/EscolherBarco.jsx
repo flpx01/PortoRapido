@@ -26,7 +26,7 @@ const EscolherBarco = () => {
 
       <div className="escolher-barco-info">
         <div className="icon-container">
-          <img src="/assets/boat-icon.png" alt="Ícone de barco" className="boat-icon" />
+          <img src="src/assets/Captura de tela de 2024-11-18 16-13-50.png" alt="Ícone de barco" className="boat-icon" />
           <p>Viagens para hoje</p>
         </div>
         <div className="tab-menu">
@@ -53,7 +53,7 @@ const EscolherBarco = () => {
                   className="barco-button"
                   onClick={() => handleSelecionarBarco(barco)}
                 >
-                  <img src="/assets/boat-icon.png" alt="Barco" className="barco-icon" />
+                  <img src="src/assets/Captura de tela de 2024-11-18 16-13-50.png" alt="Barco" className="barco-icon" />
                   {barco.nome}
                 </button>
               </td>
@@ -69,8 +69,8 @@ const EscolherBarco = () => {
       </button>
 
       <footer className="escolher-barco-footer">
-        <button className="footer-icon" onClick={() => navigate("/dashboard")}><i class="las la-home"></i></button>
-        <button className="footer-icon" onClick={() => navigate("/alertas")}><i class="las la-exclamation-circle"></i></button>
+        <button className="footer-icon" onClick={() => navigate("/dashboard")}><i className="las la-home"></i></button>
+        <button className="footer-icon" onClick={() => navigate("/alertas")}><i className="las la-exclamation-circle"></i></button>
       </footer>
     </div>
   );
