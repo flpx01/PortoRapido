@@ -29,7 +29,7 @@ export default function PortoRegistro() {
       <div className="time-display">11:16</div>
 
       <div className="location-info">
-        <div className="location-text">01 - Porto de Açu</div>
+        <div className="location-text">01 - Porto Açu</div>
       </div>
 
       <div className="document-icon">
