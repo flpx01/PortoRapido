@@ -9,6 +9,7 @@ import RegistrarPonto from "./pages/RegistrarPonto/RegistrarPonto";
 import "./styles/global.css";
 import PosicaoCaminhao from "./pages/PosicaoCaminhao/PosicaoCaminhao";
 import Alertas from "./pages/Alertas/Alertas";
+import PortoRegistro from "./pages/PortoRegistro/PortoRegistro";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/agendados" element={<Agendados />} />
         <Route path="/posicao-caminhao" element={<PosicaoCaminhao />} />
         <Route path="/alertas" element={<Alertas />} />
+        <Route path="/porto-registro" element={<PortoRegistro />} />
       </Routes>
     </Router>
   );
