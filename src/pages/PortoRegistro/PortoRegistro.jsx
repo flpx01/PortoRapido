@@ -1,10 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import "./PortoRegistro.css";
+import { useEffect, useState } from "react";
 import Karine from "../../assets/karine.jpeg"
 import Mapa from "../../assets/mapa.png"
 
 export default function PortoRegistro() {
   const navigate = useNavigate();
+  const [user, setUser] = useState({ nome: "", sobrenome: "", role: "" });
+
+  useEffect(() => {
+    // Buscar informações do usuário do localStorage
+    const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+    if (loggedUser) {
+      setUser(loggedUser);
+    }
+  }, []);
 
   return (
     <div className="location-container">
@@ -21,7 +31,7 @@ export default function PortoRegistro() {
           />
         </div>
         <div className="profile-info">
-          <h2 className="profile-name">Karine Almeida</h2>
+          <h2 className="profile-name">{user.nome} {user.sobrenome}</h2>
           <p className="profile-role">Caminhoneiro(a)</p>
         </div>
       </div>
