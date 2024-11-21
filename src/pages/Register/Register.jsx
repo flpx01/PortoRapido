@@ -9,6 +9,7 @@ const Register = () => {
     email: "",
     senha: "",
     confirmaSenha: "",
+    foto: null, // Para armazenar a imagem do usuário
   });
 
   const [error, setError] = useState("");
@@ -19,11 +20,22 @@ const Register = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
-    const { nome, sobrenome, email, senha, confirmaSenha } = formData;
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData({ ...formData, foto: reader.result }); // Salva a imagem em base64 no estado
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
-    if (!nome || !sobrenome || !email || !senha || !confirmaSenha) {
-      setError("Por favor, preencha todos os campos!");
+  const handleSubmit = () => {
+    const { nome, sobrenome, email, senha, confirmaSenha, foto } = formData;
+
+    if (!nome || !sobrenome || !email || !senha || !confirmaSenha || !foto) {
+      setError("Por favor, preencha todos os campos e envie uma foto!");
       return;
     }
 
@@ -40,7 +52,7 @@ const Register = () => {
       return;
     }
 
-    users.push({ nome, sobrenome, email, senha });
+    users.push({ nome, sobrenome, email, senha, foto });
     localStorage.setItem("users", JSON.stringify(users));
     setError("");
     navigate("/login");
@@ -95,6 +107,12 @@ const Register = () => {
             value={formData.confirmaSenha}
             onChange={handleChange}
             className="register-input"
+          />
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+            className="register-input-file"
           />
         </div>
         {error && <p className="register-error">{error}</p>}
