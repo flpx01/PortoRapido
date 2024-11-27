@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaShip, FaMapMarkerAlt, FaCalendarCheck, FaHome, FaBell } from 'react-icons/fa';
+import { FaShip, FaMapMarkerAlt, FaCalendarCheck, FaHome, FaBell } from "react-icons/fa";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -13,7 +13,7 @@ const Dashboard = () => {
 
     if (!loggedUser) {
       // Se não há usuário logado, redireciona para o login
-      navigate("/login");
+      navigate("/");
     } else {
       setUser(loggedUser); // Seta os dados do usuário
     }
@@ -22,7 +22,7 @@ const Dashboard = () => {
   const handleLogout = () => {
     // Limpa o usuário logado e redireciona para o login
     localStorage.removeItem("loggedUser");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -30,8 +30,9 @@ const Dashboard = () => {
       <div className="dashboard-header">
         <div className="user-info">
           <img
-            src="https://via.placeholder.com/40"
+            src={user?.foto || "https://via.placeholder.com/40"} // Usa a imagem do usuário ou uma imagem padrão
             alt="Avatar"
+            className="user-avatar"
           />
           <p>Olá, {user ? user.nome : "Carregando..."}</p>
         </div>

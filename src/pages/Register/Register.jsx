@@ -55,7 +55,7 @@ const Register = () => {
     users.push({ nome, sobrenome, email, senha, foto });
     localStorage.setItem("users", JSON.stringify(users));
     setError("");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
