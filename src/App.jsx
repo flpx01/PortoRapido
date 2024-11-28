@@ -1,28 +1,37 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Alertas from "./pages/Alertas/Alertas";
+import DashboardMotorista from "./pages/Dashboard/DashboardMotorista";
+import DashboardLogistica from "./pages/Dashboard/DashboardLogistica";
 import EscolherBarco from "./pages/EscolherBarco/EscolherBarco";
 import AgendarBarco from "./pages/EscolherBarco/AgendarBarco";
-import Agendados from "./pages/Agendados/Agendados";
-import "./styles/global.css";
+import AgendadosLogistica from "./pages/Agendados/AgendadosLogistica";
 import PosicaoCaminhao from "./pages/PosicaoCaminhao/PosicaoCaminhao";
-import Alertas from "./pages/Alertas/Alertas";
 import PortoRegistro from "./pages/PortoRegistro/PortoRegistro";
+import CadastroEmpresa from "./pages/CadastroEmpresa/CadastroEmpresa"; // Nova tela
 
 function App() {
   return (
     <Router>
       <Routes>
+        {/* Rotas Universais */}
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/alertas" element={<Alertas />} />
+
+        {/* Rotas para Motorista */}
+        <Route path="/dashboard-motorista" element={<DashboardMotorista />} />
+        <Route path="/agendados" element={<AgendadosLogistica />} />
+        <Route path="/porto-registro" element={<PortoRegistro />} />
+        <Route path="/posicao-caminhao" element={<PosicaoCaminhao />} />
+
+        {/* Rotas para Logística */}
+        <Route path="/dashboard-logistica" element={<DashboardLogistica />} />
         <Route path="/escolher-barco" element={<EscolherBarco />} />
         <Route path="/escolher-barco/agendar/:barcoId" element={<AgendarBarco />} />
-        <Route path="/agendados" element={<Agendados />} />
-        <Route path="/posicao-caminhao" element={<PosicaoCaminhao />} />
-        <Route path="/alertas" element={<Alertas />} />
-        <Route path="/porto-registro" element={<PortoRegistro />} />
+        <Route path="/cadastro-empresa" element={<CadastroEmpresa />} />
+        <Route path="/agendados-Logistica" element={<AgendadosLogistica />} />
       </Routes>
     </Router>
   );

@@ -33,7 +33,13 @@ const Login = () => {
     // Armazena o usuário logado
     localStorage.setItem("loggedUser", JSON.stringify(user));
     setError("");
-    navigate("/dashboard"); // Redireciona para a tela de dashboard
+
+    // Redireciona com base no tipo do usuário
+    if (user.tipo === "motorista") {
+      navigate("/dashboard-motorista"); // Dashboard para Motorista
+    } else if (user.tipo === "logistica") {
+      navigate("/dashboard-logistica"); // Dashboard para Logística
+    }
   };
 
   const goToRegister = () => {
@@ -43,7 +49,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-      <img src="src/assets/61f1ece6-5915-4f8b-a242-586e78576196.jpeg" alt="PortoRápido" className="login-logo" />
+        <img src="src/assets/61f1ece6-5915-4f8b-a242-586e78576196.jpeg" alt="PortoRápido" className="login-logo" />
         <h1 className="login-title">Login</h1>
         <div className="login-input-container">
           <input

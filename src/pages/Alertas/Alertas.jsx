@@ -7,7 +7,7 @@ export default function Alertas() {
   return (
     <div className="alerts-container">
       <header className="alerts-header">
-        <button className="back-button" onClick={() => navigate("/dashboard")}>
+        <button className="back-button" onClick={() => navigate("/dashboard-logistica")}>
           ←
         </button>
         <h1>Alertas</h1>

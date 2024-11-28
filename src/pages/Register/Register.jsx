@@ -10,6 +10,7 @@ const Register = () => {
     senha: "",
     confirmaSenha: "",
     foto: null, // Para armazenar a imagem do usuário
+    tipo: "", // Para armazenar o tipo de usuário
   });
 
   const [error, setError] = useState("");
@@ -32,10 +33,10 @@ const Register = () => {
   };
 
   const handleSubmit = () => {
-    const { nome, sobrenome, email, senha, confirmaSenha, foto } = formData;
+    const { nome, sobrenome, email, senha, confirmaSenha, foto, tipo } = formData;
 
-    if (!nome || !sobrenome || !email || !senha || !confirmaSenha || !foto) {
-      setError("Por favor, preencha todos os campos e envie uma foto!");
+    if (!nome || !sobrenome || !email || !senha || !confirmaSenha || !foto || !tipo) {
+      setError("Por favor, preencha todos os campos, escolha um tipo e envie uma foto!");
       return;
     }
 
@@ -52,7 +53,7 @@ const Register = () => {
       return;
     }
 
-    users.push({ nome, sobrenome, email, senha, foto });
+    users.push({ nome, sobrenome, email, senha, foto, tipo });
     localStorage.setItem("users", JSON.stringify(users));
     setError("");
     navigate("/");
@@ -114,6 +115,30 @@ const Register = () => {
             onChange={handleImageUpload}
             className="register-input-file"
           />
+          <div className="user-type-container">
+            <label>
+              <input
+                type="radio"
+                name="tipo"
+                value="motorista"
+                checked={formData.tipo === "motorista"}
+                onChange={handleChange}
+                className="user-type-radio"
+              />
+              Motorista
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="tipo"
+                value="logistica"
+                checked={formData.tipo === "logistica"}
+                onChange={handleChange}
+                className="user-type-radio"
+              />
+              Logística
+            </label>
+          </div>
         </div>
         {error && <p className="register-error">{error}</p>}
         <button onClick={handleSubmit} className="register-button">

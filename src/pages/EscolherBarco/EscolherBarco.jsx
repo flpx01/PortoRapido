@@ -69,7 +69,7 @@ const EscolherBarco = () => {
       </button>
 
       <footer className="escolher-barco-footer">
-        <button className="footer-icon" onClick={() => navigate("/dashboard")}><i className="las la-home"></i></button>
+        <button className="footer-icon" onClick={() => navigate("/dashboard-logistica")}><i className="las la-home"></i></button>
         <button className="footer-icon" onClick={() => navigate("/alertas")}><i className="las la-exclamation-circle"></i></button>
       </footer>
     </div>

@@ -7,7 +7,7 @@ export default function PosicaoCaminhao() {
   return (
     <div className="container">
       <header className="header">
-        <button className="back-button" onClick={() => navigate("/dashboard")}>
+        <button className="back-button" onClick={() => navigate("/dashboard-logistica")}>
           ←
         </button>
         <h1>Caminhão</h1>
@@ -86,7 +86,7 @@ export default function PosicaoCaminhao() {
       <footer className="footer">
         <button
           className="footer-button"
-          onClick={() => navigate("/dashboard")}
+          onClick={() => navigate("/dashboard-logistica")}
         >
           <i className="las la-home"></i>
         </button>

@@ -53,10 +53,10 @@ const Dashboard = () => {
               </button>
               <button
                 className="dashboard-button"
-                onClick={() => navigate("/porto-registro")}
+                onClick={() => navigate("/registro-motorista")}
               >
                 <FaMapMarkerAlt className="icon" />
-                Ponto de Registro
+                Registrar Motorista
               </button>
               <button
                 className="dashboard-button"
@@ -83,7 +83,7 @@ const Dashboard = () => {
       </div>
 
       <div className="bottom-navbar">
-        <div className="nav-item" onClick={() => navigate("/dashboard")}>
+        <div className="nav-item" onClick={() => navigate("/dashboard-logistica")}>
           <FaHome className="icon" />
           <p>Início</p>
         </div>

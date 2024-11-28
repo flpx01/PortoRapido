@@ -1,0 +1,95 @@
+.cadastro-empresa-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cadastro-empresa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #004766;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .voltar-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .cadastro-empresa-barco-info {
+    width: 100%;
+    background-color: #e6f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .cadastro-empresa-form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .cadastro-empresa-input,
+  .cadastro-empresa-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .cadastro-empresa-textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .cadastro-empresa-radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .cadastro-empresa-radio-group label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .cadastro-empresa-radio-group input {
+    margin-right: 8px;
+  }
+  
+  .cadastro-empresa-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004766;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cadastro-empresa-button:hover {
+    background-color: #003348;
+  }
+  

@@ -31,7 +31,7 @@ const AgendarBarco = () => {
 
     // Exibir alerta de confirmação e redirecionar para o dashboard
     alert("Agendamento confirmado com sucesso!");
-    navigate("/dashboard");
+    navigate("/cadastro-empresa");
   };
 
   return (
