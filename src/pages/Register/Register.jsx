@@ -11,6 +11,7 @@ const Register = () => {
     confirmaSenha: "",
     foto: null, // Para armazenar a imagem do usuário
     tipo: "", // Para armazenar o tipo de usuário
+    cnh: "", // Para armazenar o número da CNH, caso o usuário seja motorista
   });
 
   const [error, setError] = useState("");
@@ -33,7 +34,7 @@ const Register = () => {
   };
 
   const handleSubmit = () => {
-    const { nome, sobrenome, email, senha, confirmaSenha, foto, tipo } = formData;
+    const { nome, sobrenome, email, senha, confirmaSenha, foto, tipo, cnh } = formData;
 
     if (!nome || !sobrenome || !email || !senha || !confirmaSenha || !foto || !tipo) {
       setError("Por favor, preencha todos os campos, escolha um tipo e envie uma foto!");
@@ -45,6 +46,12 @@ const Register = () => {
       return;
     }
 
+    // Se o tipo for motorista, verificar se a CNH foi preenchida
+    if (tipo === "motorista" && !cnh) {
+      setError("Por favor, insira o número da CNH!");
+      return;
+    }
+
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const userExists = users.find((user) => user.email === email);
 
@@ -53,10 +60,23 @@ const Register = () => {
       return;
     }
 
-    users.push({ nome, sobrenome, email, senha, foto, tipo });
+    // Salva o usuário em todos os usuários
+    users.push({ nome, sobrenome, email, senha, foto, tipo, cnh: tipo === "motorista" ? cnh : null });
     localStorage.setItem("users", JSON.stringify(users));
+
+    // Se o usuário for um motorista, salve também na lista de motoristas
+    if (tipo === "motorista") {
+      const motoristas = JSON.parse(localStorage.getItem("motoristas")) || [];
+      motoristas.push({ nome, sobrenome, email, foto, cnh });
+      localStorage.setItem("motoristas", JSON.stringify(motoristas));
+    }
+
     setError("");
     navigate("/");
+  };
+
+  const handleCancel = () => {
+    navigate("/"); // Redireciona para a página de login
   };
 
   return (
@@ -139,10 +159,27 @@ const Register = () => {
               Logística
             </label>
           </div>
+
+          {/* Mostrar o campo de CNH apenas se o tipo for "motorista" */}
+          {formData.tipo === "motorista" && (
+            <input
+              type="text"
+              name="cnh"
+              placeholder="Número da CNH"
+              value={formData.cnh}
+              onChange={handleChange}
+              className="register-input"
+            />
+          )}
         </div>
+
         {error && <p className="register-error">{error}</p>}
         <button onClick={handleSubmit} className="register-button">
           Confirmar
+        </button>
+
+        <button onClick={handleCancel} className="cancel-button">
+          Cancelar
         </button>
       </div>
     </div>

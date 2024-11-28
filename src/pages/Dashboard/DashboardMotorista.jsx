@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaShip, FaMapMarkerAlt, FaCalendarCheck, FaHome, FaBell } from "react-icons/fa";
+import { FaMapMarkerAlt, FaCalendarCheck, FaHome, FaBell } from "react-icons/fa";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -44,20 +44,20 @@ const Dashboard = () => {
           <div>
             <h1>Porto Rápido</h1>
             <div className="buttons-container">
-              <button
+              {/* <button
                 className="dashboard-button"
                 onClick={() => navigate("/escolher-barco")}
               >
                 <FaShip className="icon" />
                 Escolher Barco
-              </button>
-              <button
+              </button> */}
+              {/* <button
                 className="dashboard-button"
                 onClick={() => navigate("/porto-registro")}
               >
                 <FaMapMarkerAlt className="icon" />
                 Ponto de Registro
-              </button>
+              </button> */}
               <button
                 className="dashboard-button"
                 onClick={() => navigate("/posicao-caminhao")}
@@ -83,7 +83,7 @@ const Dashboard = () => {
       </div>
 
       <div className="bottom-navbar">
-        <div className="nav-item" onClick={() => navigate("/dashboard-logistica")}>
+        <div className="nav-item" onClick={() => navigate("/dashboard-motorista")}>
           <FaHome className="icon" />
           <p>Início</p>
         </div>

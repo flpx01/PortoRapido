@@ -7,7 +7,7 @@ export default function PosicaoCaminhao() {
   return (
     <div className="container">
       <header className="header">
-        <button className="back-button" onClick={() => navigate("/dashboard-logistica")}>
+        <button className="back-button" onClick={() => navigate("/dashboard-motorista")}>
           ←
         </button>
         <h1>Caminhão</h1>
