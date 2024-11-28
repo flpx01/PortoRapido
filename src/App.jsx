@@ -10,6 +10,8 @@ import AgendadosLogistica from "./pages/Agendados/AgendadosLogistica";
 import PosicaoCaminhao from "./pages/PosicaoCaminhao/PosicaoCaminhao";
 import PortoRegistro from "./pages/PortoRegistro/PortoRegistro";
 import CadastroEmpresa from "./pages/CadastroEmpresa/CadastroEmpresa"; // Nova tela
+import MotoristasCadastrados from "./pages/MotoristasCadastrados/MotoristasCadastrados";
+import RegistroMotorista from "./pages/RegistroMotorista/RegistroMotorista";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/escolher-barco/agendar/:barcoId" element={<AgendarBarco />} />
         <Route path="/cadastro-empresa" element={<CadastroEmpresa />} />
         <Route path="/agendados-Logistica" element={<AgendadosLogistica />} />
+        <Route path="/motoristas-cadastrados" element={<MotoristasCadastrados />} />
+        <Route path="/registro-motorista" element={<RegistroMotorista />} />
       </Routes>
     </Router>
   );

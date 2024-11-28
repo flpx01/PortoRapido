@@ -53,7 +53,7 @@ const Dashboard = () => {
               </button>
               <button
                 className="dashboard-button"
-                onClick={() => navigate("/registro-motorista")}
+                onClick={() => navigate("/motoristas-cadastrados")}
               >
                 <FaMapMarkerAlt className="icon" />
                 Registrar Motorista

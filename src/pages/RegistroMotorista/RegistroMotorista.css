@@ -1,0 +1,41 @@
+.registro-motorista-container {
+    padding: 20px;
+  }
+  
+  .registro-motorista-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .back-button {
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .registro-motorista-form {
+    margin-top: 20px;
+  }
+  
+  .registro-motorista-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .registro-motorista-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .registro-motorista-button:hover {
+    background-color: #0056b3;
+  }
+  
